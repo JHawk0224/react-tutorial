@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function FruitComponent({ fruit, setNumber, setFruits }) {
   const [currentPrice, setCurrentPrice] = useState(fruit.price);
@@ -7,6 +7,11 @@ function FruitComponent({ fruit, setNumber, setFruits }) {
     setCurrentPrice((prevPrice) => prevPrice + 1);
     setNumber((prevNumber) => prevNumber + 1);
   }
+
+  useEffect(() => {
+    // EDIT ME HERE
+    // console.log("Testing!")
+  });
 
   return (
     <div style={{ color: fruit.color, backgroundColor: "grey" }}>
