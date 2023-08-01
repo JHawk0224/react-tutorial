@@ -1,29 +1,9 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FruitComponent from "./Fruit";
 
 function App() {
-  const initialFruits = [
-    {
-      name: "apple",
-      description: "a mediocre fruit",
-      price: 2.5,
-      color: "red",
-    },
-    {
-      name: "banana",
-      description: "an amazing fruit",
-      color: "yellow",
-    },
-    {
-      name: "orange",
-      description: "a very good fruit",
-      price: 2.5,
-      color: "orange",
-    },
-  ];
-
-  const [fruits, setFruits] = useState(initialFruits);
+  const [fruits, setFruits] = useState([]);
   const [color, setColor] = useState("green");
   const [number, setNumber] = useState(0);
   const [inputText, setInputText] = useState("");
@@ -31,6 +11,24 @@ function App() {
   function changeColor() {
     setColor(color === "green" ? "blue" : "green");
   }
+
+  useEffect(() => {
+    fetch("http://www.fruityvice.com/api/fruit/all", {
+      method: "GET",
+      // headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        // console.log(response); // On success; Prints a Response object
+        response.json().then((responseJSON) => {
+          console.log(responseJSON);
+          setFruits(responseJSON);
+        });
+      })
+      .catch((error) => {
+        // On failure (timeout, bad request, ...)
+        console.log(error);
+      });
+  }, []);
 
   return (
     <div className={"App " + color}>

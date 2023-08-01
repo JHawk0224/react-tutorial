@@ -1,3 +1,18 @@
+# Using Styled Components
+
+For class and homework, I would like you to add CSS styling to your fruits project using [Styled Components](https://styled-components.com/docs/basics).
+
+## Setting up Styled Components
+
+After opening up the project in VSCode and opening a terminal inside the project directory, you will have do to
+
+```
+yarn add styled-components
+```
+
+Then, it's as simple as adding a `<Style>` wrapper like I have below in whatever file you want to add styling to!
+
+```typescript
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -5,19 +20,10 @@ const Style = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 
-  .main-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-  }
-
-  .roles-container {
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  .fruit {
+    color: blue;
+    background-color: grey;
   }
 `;
 
@@ -31,7 +37,7 @@ function FruitComponent({ fruit, setNumber, setFruits }) {
 
   return (
     <Style>
-      <div style={{ color: fruit.color, backgroundColor: "grey" }}>
+      <div className="fruit">
         <h3>{fruit.name}</h3>
         <p>{fruit.description}</p>
         <p>{currentPrice}</p>
@@ -52,3 +58,4 @@ function FruitComponent({ fruit, setNumber, setFruits }) {
 }
 
 export default FruitComponent;
+```
