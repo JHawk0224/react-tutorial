@@ -99,7 +99,7 @@ If you have extra time or want to, you can also use components from [Material UI
 
 For example, you may want to use some of the following.
 
-[Text Field](https://mui.com/material-ui/react-text-field/)
+[Text Field](https://mui.com/material-ui/react-text-field/)<br />
 [Button](https://mui.com/material-ui/react-button/)
 
 To install it, since we are using styled-components, you will need to run:
