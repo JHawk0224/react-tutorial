@@ -59,3 +59,30 @@ function FruitComponent({ fruit, setNumber, setFruits }) {
 
 export default FruitComponent;
 ```
+
+## Adding variables
+
+What if you want to add variables in the style? Then you can do something like this:
+
+```typescript
+const Style = styled.div<{ $imageSize: number }>`
+  .image {
+    width: ${(props) => props.$imageSize}px;
+    height: ${(props) => props.$imageSize}px;
+  }
+`;
+```
+
+and in the wrapper below:
+
+```typescript
+  ...
+  const imageSize = 100;
+  return (
+    <Style $imageSize={imageSize}>
+      <div className="image">
+        ...
+      </div>
+    </Style>
+  );
+```
