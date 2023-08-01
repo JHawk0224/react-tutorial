@@ -92,3 +92,20 @@ and in the wrapper below:
     </Style>
   );
 ```
+
+## Adding MUI components
+
+If you have extra time or want to, you can also use components from [Material UI](https://mui.com/).
+
+For example, you may want to use some of the following.
+
+[Text Field](https://mui.com/material-ui/react-text-field/)
+[Button](https://mui.com/material-ui/react-button/)
+
+To install it, since we are using styled-components, you will need to run:
+
+```
+yarn add @mui/material @mui/styled-engine-sc styled-components @mui/icons-material
+```
+
+Then checkout https://mui.com/material-ui/getting-started/usage/ on how to use these components!
