@@ -2,6 +2,12 @@
 
 For class and homework, I would like you to add CSS styling to your fruits project using [Styled Components](https://styled-components.com/docs/basics).
 
+Here are some websites that have example list styling. Some of them provide the corresponding CSS, but don't look at this and instead just use the site as inspiration on how to make your list:
+
+[List 1](https://codepen.io/michellebarker/pen/poLoeRq)
+[List 2](https://codepen.io/Adir-SL/pen/rNwBmpM)
+[Here](https://freefrontend.com/css-lists/) are some more, but these can get pretty complicated.
+
 ## Setting up Styled Components
 
 After opening up the project in VSCode and opening a terminal inside the project directory, you will have do to
