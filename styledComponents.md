@@ -16,7 +16,7 @@ After opening up the project in VSCode and opening a terminal inside the project
 yarn add styled-components
 ```
 
-Then, it's as simple as adding a `<Style>` wrapper like I have below in whatever file you want to add styling to!
+Then, it's as simple as adding a `<Style>` wrapper like I have below in whatever file you want to add styling to! (I just added it to this file as a quick example, but this styling might not/should not actually go in this file. This is for you to figure out!)
 
 ```typescript
 import React, { useState } from "react";
